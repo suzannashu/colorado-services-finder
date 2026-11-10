@@ -1,6 +1,6 @@
 import { ProgramDirectory, type Category } from "@/components/ProgramDirectory";
 import { FullBleed, PageShell } from "@/components/SiteChrome";
-import { Button, Icon, ImgPlaceholder } from "@/components/ui";
+import { Button, Icon } from "@/components/ui";
 
 const categories: Category[] = [
   {
@@ -183,13 +183,16 @@ const categories: Category[] = [
 export default function BrowsePage() {
   return (
     <PageShell active="browse">
-      <FullBleed className="bg-[#757575] text-white">
-        <div className="flex w-[567px] flex-col gap-8">
+      <FullBleed
+        className="bg-[#e3f3ed] text-[#363a61]"
+        innerClassName="flex h-[353px] items-center justify-between gap-8 px-32"
+      >
+        <div className="flex w-[567px] shrink-0 flex-col gap-8">
           <div className="flex flex-col gap-2">
-            <h1 className="font-heavy text-[40px] leading-tight">
+            <h1 className="w-[498px] font-heavy text-[40px] leading-[normal]">
               Explore programs that support your family
             </h1>
-            <p className="text-lg">
+            <p className="text-lg leading-[normal]">
               Each program has its own benefits, eligibility rules, and
               expectations. Review the details, or take the eligibility screener
               to see which ones fit your family.
@@ -200,7 +203,14 @@ export default function BrowsePage() {
             <Icon name="icon-east-white-2.svg" size={20} />
           </Button>
         </div>
-        <ImgPlaceholder />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/hifi-browse-hero-illustration.png"
+          alt=""
+          width={714}
+          height={293}
+          className="h-[293px] w-[714px] shrink-0 object-contain"
+        />
       </FullBleed>
 
       <section className="flex flex-col items-center py-[60px]">
