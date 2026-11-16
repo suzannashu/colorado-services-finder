@@ -13,14 +13,11 @@ export function SiteHeader({
   active,
   bordered = false,
   showQuickApply = true,
-  theme = "teal",
 }: {
   active?: "browse" | "eligibility" | "refer";
   bordered?: boolean;
   showQuickApply?: boolean;
-  theme?: ChromeTheme;
 }) {
-  const navy = theme === "navy";
   return (
     <header
       className={`w-full bg-white ${bordered ? "border-b border-[#e0e0e0]" : ""}`}
@@ -36,14 +33,12 @@ export function SiteHeader({
         </Link>
 
         <div className="flex min-w-0 flex-1 items-center justify-end gap-10 pl-8 lg:justify-between lg:pl-16">
-          <nav
-            className={`hidden items-center gap-10 text-base md:flex ${navy ? "text-[#1d1d1d]" : "text-black"}`}
-          >
+          <nav className="hidden items-center gap-10 text-base text-[#1d1d1d] md:flex">
             {links.map((link) =>
               active === link.key ? (
                 <span
                   key={link.href}
-                  className={`rounded-2xl px-3 py-2 ${navy ? "bg-[rgba(54,58,97,0.12)]" : "bg-[rgba(32,92,111,0.2)]"}`}
+                  className="rounded-2xl bg-[rgba(54,58,97,0.12)] px-3 py-2"
                 >
                   {link.label}
                 </span>
@@ -63,11 +58,7 @@ export function SiteHeader({
             {showQuickApply ? (
               <Link
                 href="/apply"
-                className={
-                  navy
-                    ? "rounded-[6px] bg-[#363a61] px-4 py-2.5 text-sm text-white hover:bg-[#2b2e4e]"
-                    : "rounded-[4px] bg-[#205c6f] px-4 py-2.5 text-sm text-white"
-                }
+                className="rounded-[6px] bg-[#363a61] px-4 py-2.5 text-sm text-white hover:bg-[#2b2e4e]"
               >
                 Apply now
               </Link>
@@ -183,7 +174,6 @@ export function PageShell({
         active={active}
         bordered={borderedHeader}
         showQuickApply={showQuickApply}
-        theme={theme}
       />
       <main className="w-full flex-1">{children}</main>
       <SiteFooter theme={theme} />
