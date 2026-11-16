@@ -1,21 +1,21 @@
-import { FullBleed, PageShell } from "@/components/SiteChrome";
-import { Button, Chip, Icon, ImgPlaceholder } from "@/components/ui";
+import { PageShell } from "@/components/SiteChrome";
+import { Button, Chip, Icon } from "@/components/ui";
 
 const steps = [
   {
-    icon: "icon-refer-step1.svg",
+    icon: "hifi-refer-icon-step1.svg",
     label: "STEP 1",
     title: "Submit the intake form",
     body: "Share basic contact details for the family and, if you know it, the program that seems like the best fit.",
   },
   {
-    icon: "icon-refer-step2.svg",
+    icon: "hifi-refer-icon-step2.svg",
     label: "STEP 2",
     title: "A specialist follows up",
     body: "A state child care specialist reaches out to the family directly to explain options and answer questions.",
   },
   {
-    icon: "icon-refer-step3.svg",
+    icon: "hifi-refer-icon-step3.svg",
     label: "STEP 3",
     title: "The family gets enrolled",
     body: "The specialist helps the family enroll in the home visiting program that matches their needs.",
@@ -64,103 +64,142 @@ const programs = [
     abbr: "SafeCare",
     name: "",
     body: "A short-term, in-home program that coaches parents on positive parent-child interaction, home safety, and recognizing when a child needs medical care.",
-    serves: "Families with children ages 0–5.",
-    url: "safecare.publichealth.gsu.edu",
-    href: "https://safecare.publichealth.gsu.edu/",
+    serves: "Parents and caregivers of children under age 6.",
+    url: "cdec.colorado.gov/safecare-colorado",
+    href: "https://cdec.colorado.gov/safecare-colorado",
   },
 ];
+
+function HeroIllustration() {
+  return (
+    <div
+      className="relative h-[292px] w-[476px] shrink-0 overflow-clip"
+      aria-hidden="true"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/hifi-refer-hero-layer3.svg"
+        alt=""
+        width="178.56"
+        height="183.665"
+        className="absolute top-[22.776px] left-[59.5px] max-w-none"
+        style={{ width: "178.56px", height: "183.665px" }}
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/hifi-refer-hero-layer4.svg"
+        alt=""
+        width="126.714"
+        height="130.826"
+        className="absolute top-[70.109px] left-[86.918px] max-w-none"
+        style={{ width: "126.714px", height: "130.826px" }}
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/hifi-refer-hero-people.svg"
+        alt=""
+        width="476.006"
+        height="292.001"
+        className="absolute top-0 left-0 max-w-none"
+        style={{ width: "476.006px", height: "292.001px" }}
+      />
+    </div>
+  );
+}
 
 export default function ReferPage() {
   return (
     <PageShell active="refer">
-      <FullBleed
-        className="bg-[#757575] text-white"
-        innerClassName="flex items-center justify-between px-32 py-[25px]"
-      >
-        <div className="flex w-[567px] flex-col gap-8">
-          <div className="flex flex-col gap-2">
-            <p className="text-base tracking-[2.56px]">FOR PROFESSIONALS</p>
-            <h1 className="font-heavy text-[40px] leading-tight">
-              Refer a family to a home visiting program
-            </h1>
-            <p className="text-lg">
-              Medical providers and social workers can connect families to
-              Colorado&apos;s home visiting programs with one short form.
-            </p>
+      <section className="w-full bg-[#e3f3ed]">
+        <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[60px] px-32 py-[30px]">
+          <div className="flex w-[567px] shrink-0 flex-col gap-8 text-[#363a61]">
+            <div className="flex flex-col gap-2 leading-[normal]">
+              <p className="font-black text-base tracking-[2.56px]">
+                FOR PROFESSIONALS
+              </p>
+              <h1 className="font-heavy w-[498px] text-[40px]">
+                Refer a family to a home visiting program
+              </h1>
+              <p className="text-lg">
+                Medical providers and social workers can connect families to
+                Colorado&apos;s home visiting programs with one short form.
+              </p>
+            </div>
+            <div className="flex items-center gap-10">
+              <Button href="/refer/form" variant="navy" className="leading-4">
+                Start a referral
+                <Icon name="icon-east-white.svg" size={20} />
+              </Button>
+              <Button
+                href="/refer/login"
+                variant="navy-outline"
+                className="leading-4"
+              >
+                Log in
+              </Button>
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <Button href="/refer/form" className="w-fit !px-4">
-              Start a referral
-              <Icon name="icon-east-white-3.svg" size={20} />
-            </Button>
-            <Button href="/refer/login" variant="secondary" className="w-fit !px-4">
-              Log in
-            </Button>
-          </div>
+          <HeroIllustration />
         </div>
-        <ImgPlaceholder />
-      </FullBleed>
+      </section>
 
-      <section className="flex flex-col items-center gap-10 py-10">
-        <div className="flex w-[1160px] flex-col gap-10">
-          <h2 className="font-heavy text-2xl text-[#1d1d1d]">
+      <div className="flex flex-col items-center gap-2">
+        <section className="flex w-[1160px] flex-col gap-10 py-10">
+          <h2 className="font-heavy text-2xl leading-[normal] text-[#363a61]">
             How a referral works
           </h2>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="flex w-full items-stretch gap-12">
             {steps.map((step) => (
-              <div
+              <article
                 key={step.title}
-                className="flex flex-col gap-9 rounded-2xl border border-[#e0e0e0] bg-white p-6"
+                className="flex min-w-0 flex-1 flex-col gap-9 rounded-2xl border border-[#e0e0e0] bg-white p-6 leading-[normal] text-[#363a61]"
               >
-                <p className="text-base text-[#1d1d1d]">{step.label}</p>
-                <Icon name={step.icon} size={60} />
+                <p className="text-base">{step.label}</p>
+                <Icon name={step.icon} size={80} />
                 <div className="flex flex-col gap-4">
                   <h3 className="font-heavy text-lg">{step.title}</h3>
                   <p className="text-base">{step.body}</p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div className="flex w-[1160px] flex-col gap-10">
-          <div>
-            <h2 className="font-heavy text-2xl text-[#1d1d1d]">
+        <section className="flex w-[1160px] flex-col gap-10">
+          <div className="flex flex-col gap-2 text-[#1d1d1d]">
+            <h2 className="font-heavy text-2xl leading-[normal]">
               Home visiting programs you can refer to
             </h2>
-            <p className="mt-2 text-lg text-[#1d1d1d]">
+            <p className="text-lg leading-6">
               A quick look at a few of the programs you can apply to here.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-12">
-            {programs.slice(0, 3).map((p) => (
+            {programs.map((p) => (
               <ProgramCard key={p.abbr} {...p} />
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-12">
-            {programs.slice(3).map((p) => (
-              <ProgramCard key={p.abbr} {...p} />
-            ))}
-            <div />
-          </div>
-        </div>
+        </section>
 
-        <div className="flex w-[1170px] flex-col items-center gap-6 rounded-2xl bg-[#d2dee2] p-12 text-center">
-          <div>
-            <h2 className="font-heavy text-2xl text-[#1d1d1d]">
-              Ready to connect a family?
-            </h2>
-            <p className="mt-2 text-lg text-[#1d1d1d]">
-              The intake form takes just a few minutes. A specialist will follow
-              up with the family directly.
-            </p>
+        <section className="w-[1170px] py-10">
+          <div className="flex items-center gap-6 rounded-2xl bg-[#f2c679] px-12 py-6 text-[#363a61]">
+            <div className="flex min-w-0 flex-1 flex-col gap-2 leading-[normal]">
+              <h2 className="font-heavy text-2xl">Ready to refer a family?</h2>
+              <p className="text-lg">
+                The intake form takes just a couple of minutes.
+              </p>
+            </div>
+            <Button
+              href="/refer/form"
+              variant="navy"
+              className="shrink-0 rounded-[4px]! leading-4"
+            >
+              Start a referral
+              <Icon name="icon-east-white.svg" size={20} />
+            </Button>
           </div>
-          <Button href="/refer/form">
-            Start a referral
-            <Icon name="icon-east-white-3.svg" size={20} />
-          </Button>
-        </div>
-      </section>
+        </section>
+      </div>
     </PageShell>
   );
 }
@@ -183,15 +222,13 @@ function ProgramCard({
   href: string;
 }) {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-[#e0e0e0] bg-white p-6">
-      <Chip>{chip}</Chip>
-      <div>
-        <h3 className="font-heavy text-lg text-[#1d1d1d]">{abbr}</h3>
-        {name ? (
-          <p className="font-heavy text-base text-[#1d1d1d]">{name}</p>
-        ) : null}
+    <article className="flex flex-col items-start gap-4 rounded-2xl border border-[#e0e0e0] bg-white p-6 text-[#1d1d1d]">
+      <Chip tone="navy">{chip}</Chip>
+      <div className="font-heavy flex flex-col gap-1 leading-[normal]">
+        <h3 className="text-lg">{abbr}</h3>
+        {name ? <p className="text-base">{name}</p> : null}
       </div>
-      <p className="text-base text-[#1d1d1d]">
+      <p className="text-base leading-[normal]">
         {body}
         <br />
         <br />
@@ -202,11 +239,11 @@ function ProgramCard({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex items-center gap-2 text-base text-[#205c6f] underline"
+        className="inline-flex items-center gap-2 text-base leading-4 text-[#363a61] underline"
       >
         {url}
-        <Icon name="icon-launch.svg" size={20} />
+        <Icon name="hifi-refer-icon-launch.svg" size={20} />
       </a>
-    </div>
+    </article>
   );
 }

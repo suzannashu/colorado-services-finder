@@ -76,7 +76,7 @@ function PrimaryActions() {
 
 export default function HomePage() {
   return (
-    <PageShell theme="navy">
+    <PageShell>
       <section className="relative w-full overflow-hidden bg-[#e3f3ed]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
