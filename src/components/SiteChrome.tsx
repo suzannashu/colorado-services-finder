@@ -7,8 +7,6 @@ const links = [
   { href: "/refer", label: "Refer a family", key: "refer" },
 ] as const;
 
-type ChromeTheme = "teal" | "navy";
-
 export function SiteHeader({
   active,
   bordered = false,
@@ -78,16 +76,11 @@ export function SiteHeader({
   );
 }
 
-export function SiteFooter({ theme = "teal" }: { theme?: ChromeTheme }) {
-  const navy = theme === "navy";
+export function SiteFooter() {
   return (
-    <footer
-      className={`w-full text-white ${navy ? "bg-[#363a61]" : "bg-[#205c6f]"}`}
-    >
+    <footer className="w-full bg-[#363a61] text-white">
       <div className="mx-auto flex w-full max-w-[1440px] items-end justify-between p-[60px]">
-        <div
-          className={`flex w-[296px] flex-col gap-4 text-base ${navy ? "leading-[normal]" : ""}`}
-        >
+        <div className="flex w-[296px] flex-col gap-4 text-base leading-[normal]">
           <p className="font-heavy">EXPLORE</p>
           <Link href="/browse" className="hover:underline">
             All programs
@@ -103,29 +96,19 @@ export function SiteFooter({ theme = "teal" }: { theme?: ChromeTheme }) {
 
         <div className="flex flex-col items-end gap-6">
           <div className="flex w-[165px] flex-col items-end gap-1.5">
-            <p
-              className={`w-full text-right text-base tracking-[3.36px] ${navy ? "leading-[normal]" : ""}`}
-            >
+            <p className="w-full text-right text-base leading-[normal] tracking-[3.36px]">
               POWERED BY
             </p>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={
-                navy
-                  ? "/assets/hifi-logo-bridgecare.svg"
-                  : "/assets/logo-bridgecare.svg"
-              }
+              src="/assets/hifi-logo-bridgecare.svg"
               alt="BridgeCare"
               className="h-[31px] w-[165px]"
             />
           </div>
-          <div
-            className={`flex items-center gap-3 text-sm ${navy ? "leading-[normal]" : ""}`}
-          >
+          <div className="flex items-center gap-3 text-sm leading-[normal]">
             <span>Terms of service</span>
-            <span className={`text-base ${navy ? "leading-[normal]" : ""}`}>
-              |
-            </span>
+            <span className="text-base leading-[normal]">|</span>
             <span>Privacy Policy</span>
           </div>
         </div>
@@ -159,14 +142,12 @@ export function PageShell({
   borderedHeader = false,
   showQuickApply = true,
   className = "bg-[#f3f6fa]",
-  theme = "teal",
 }: {
   children: React.ReactNode;
   active?: "browse" | "eligibility" | "refer";
   borderedHeader?: boolean;
   showQuickApply?: boolean;
   className?: string;
-  theme?: ChromeTheme;
 }) {
   return (
     <div className={`flex min-h-screen w-full flex-col ${className}`}>
@@ -176,7 +157,7 @@ export function PageShell({
         showQuickApply={showQuickApply}
       />
       <main className="w-full flex-1">{children}</main>
-      <SiteFooter theme={theme} />
+      <SiteFooter />
     </div>
   );
 }

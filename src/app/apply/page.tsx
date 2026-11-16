@@ -130,7 +130,7 @@ function HeroIllustration() {
 
 export default function ApplyPage() {
   return (
-    <PageShell theme="navy">
+    <PageShell>
       <section className="w-full bg-[#e3f3ed]">
         <div className="mx-auto flex h-[352px] w-full max-w-[1440px] items-center justify-between px-32">
           <div className="flex w-[567px] shrink-0 flex-col gap-8 text-[#363a61]">

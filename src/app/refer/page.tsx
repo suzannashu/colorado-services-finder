@@ -109,7 +109,7 @@ function HeroIllustration() {
 
 export default function ReferPage() {
   return (
-    <PageShell active="refer" theme="navy">
+    <PageShell active="refer">
       <section className="w-full bg-[#e3f3ed]">
         <div className="mx-auto flex w-full max-w-[1440px] items-center gap-[60px] px-32 py-[30px]">
           <div className="flex w-[567px] shrink-0 flex-col gap-8 text-[#363a61]">
