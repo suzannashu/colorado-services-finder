@@ -60,7 +60,7 @@ export function ProgramDirectory({ categories }: { categories: Category[] }) {
             <button
               type="button"
               onClick={() => setSelected({ ...selected, support: [] })}
-              className="text-[#205c6f] underline underline-offset-2"
+              className="text-[#363a61] underline underline-offset-2"
             >
               Clear support filters
             </button>
@@ -82,14 +82,14 @@ export function ProgramDirectory({ categories }: { categories: Category[] }) {
             aria-labelledby={`${category.id}-heading`}
             className="scroll-mt-24 overflow-hidden rounded-2xl border border-[#e0e0e0] bg-white"
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 bg-[rgba(32,92,111,0.12)] px-6 py-4">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 bg-[rgba(54,58,97,0.12)] px-6 py-4">
               <h2
                 id={`${category.id}-heading`}
                 className="font-heavy text-2xl text-[#1d1d1d]"
               >
                 {category.name}
               </h2>
-              <p className="shrink-0 text-sm text-[#205c6f]">
+              <p className="shrink-0 text-sm text-[#363a61]">
                 {category.programs.length}{" "}
                 {category.programs.length === 1 ? "program" : "programs"}
               </p>
@@ -110,7 +110,9 @@ export function ProgramDirectory({ categories }: { categories: Category[] }) {
                         <div className="flex flex-wrap items-center gap-2">
                           <span className="text-xs text-[#757575]">Also</span>
                           {program.also.map((label) => (
-                            <Chip key={label}>{label}</Chip>
+                            <Chip key={label} tone="navy">
+                              {label}
+                            </Chip>
                           ))}
                         </div>
                       ) : null}
@@ -120,11 +122,12 @@ export function ProgramDirectory({ categories }: { categories: Category[] }) {
                     </div>
                     <Button
                       href={program.href}
+                      variant="navy-outline"
                       size="sm"
                       className="shrink-0"
                     >
-                      Learn more
-                      <Icon name="icon-chevron-right.svg" size={16} />
+                      Visit website
+                      <Icon name="hifi-refer-icon-launch.svg" size={16} />
                     </Button>
                   </article>
                 </li>

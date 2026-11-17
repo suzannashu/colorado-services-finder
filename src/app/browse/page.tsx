@@ -198,9 +198,9 @@ export default function BrowsePage() {
               to see which ones fit your family.
             </p>
           </div>
-          <Button href="/eligibility" className="w-fit !px-4">
+          <Button href="/eligibility" variant="navy" className="w-fit !px-4">
             Check what I qualify for
-            <Icon name="icon-east-white-2.svg" size={20} />
+            <Icon name="icon-east-white.svg" size={20} />
           </Button>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
