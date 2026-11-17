@@ -18,7 +18,7 @@ const OPTIONS = [
 
 export function CareNeedsForm({
   initialSelected = [],
-  nextHref = "/eligibility/6",
+  nextHref = "/eligibility/results",
   backHref = "/eligibility/3",
 }: {
   initialSelected?: string[];
