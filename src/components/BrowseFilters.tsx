@@ -85,7 +85,7 @@ export function BrowseFilters({
               type="button"
               onClick={() => setOpen(isOpen ? null : filter.id)}
               className={`rounded-full border border-[#e0e0e0] px-4 py-2.5 text-sm text-[#1d1d1d] ${
-                active ? "bg-[rgba(32,92,111,0.2)]" : "bg-white"
+                active ? "bg-[rgba(54,58,97,0.12)] text-[#363a61]" : "bg-white"
               }`}
             >
               {filter.label}
@@ -106,7 +106,7 @@ export function BrowseFilters({
                     >
                       <span className="flex size-10 items-center justify-center">
                         {checked ? (
-                          <span className="flex size-5 items-center justify-center rounded-[2px] bg-[#205c6f] text-white">
+                          <span className="flex size-5 items-center justify-center rounded-[2px] bg-[#363a61] text-white">
                             ✓
                           </span>
                         ) : (
