@@ -59,7 +59,7 @@ const elsewhere = [
     description: (
       <>
         The Early Childhood Mental Health (ECMH) Support Line offers{" "}
-        <span className="text-[#205c6f]">free, confidential help</span> for
+        <span className="text-[#363a61]">free, confidential help</span> for
         parents and caregivers of children under 6. By calling this phone line,
         families can connect with infant mental health resources, get advice on
         managing parenting stress, changes in child behavior, and locate
@@ -215,7 +215,7 @@ function QuickLink({
     >
       <span className="flex items-center justify-between gap-3">
         <span className="flex items-center gap-4 whitespace-nowrap leading-6">
-          <span className="font-normal text-4xl text-[#205c6f]">{count}</span>
+          <span className="font-normal text-4xl text-[#363a61]">{count}</span>
           <span className="font-heavy text-base text-black">{title}</span>
         </span>
         <Icon name="icon-arrow-downward.svg" size={24} alt="" />
@@ -263,7 +263,7 @@ function VisitWebsite({ href }: { href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[4px] border border-[#205c6f] bg-white px-4 py-2.5 text-sm text-[#205c6f] hover:bg-[#f3f6fa]"
+      className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[4px] border border-[#363a61] bg-white px-4 py-2.5 text-sm text-[#363a61] hover:bg-[#f3f6fa]"
     >
       Visit website
       <Icon name="icon-launch-16.svg" size={16} alt="" />
@@ -349,7 +349,7 @@ export default function EligibilityResults() {
                     }
                   />
                 </div>
-                <Chip>{program.category}</Chip>
+                <Chip tone="navy">{program.category}</Chip>
                 <p className="text-base leading-5 text-black">
                   {program.description}
                 </p>
@@ -371,7 +371,7 @@ export default function EligibilityResults() {
                 programs selected for one application
               </span>
             </p>
-            <Button href="/apply/before-you-apply">
+            <Button href="/apply/before-you-apply" variant="navy">
               Start application
               <Icon name="icon-east-white-3.svg" size={20} alt="" />
             </Button>
@@ -407,7 +407,7 @@ export default function EligibilityResults() {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {program.categories.map((category, index) => (
-                        <Chip key={`${category}-${index}`} size="xs">
+                        <Chip key={`${category}-${index}`} size="xs" tone="navy">
                           {category}
                         </Chip>
                       ))}
@@ -449,7 +449,7 @@ export default function EligibilityResults() {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {program.categories.map((category, index) => (
-                        <Chip key={`${category}-${index}`} size="xs">
+                        <Chip key={`${category}-${index}`} size="xs" tone="navy">
                           {category}
                         </Chip>
                       ))}

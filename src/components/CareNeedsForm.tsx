@@ -56,11 +56,11 @@ export function CareNeedsForm({
                     )
                   }
                   className={`flex h-[72px] w-full items-center gap-3 rounded-lg border bg-[#f3f6fa] px-4 text-left text-base text-[#1d1d1d] ${
-                    checked ? "border-[#205c6f]" : "border-[#e0e0e0]"
+                    checked ? "border-[#363a61]" : "border-[#e0e0e0]"
                   }`}
                 >
                   {checked ? (
-                    <span className="flex size-5 items-center justify-center rounded-[2px] bg-[#205c6f] text-xs text-white">
+                    <span className="flex size-5 items-center justify-center rounded-[2px] bg-[#363a61] text-xs text-white">
                       ✓
                     </span>
                   ) : (
@@ -72,10 +72,10 @@ export function CareNeedsForm({
             })}
           </div>
           <div className="flex items-center justify-between pt-2">
-            <Button href={backHref} variant="secondary">
+            <Button href={backHref} variant="navy-outline">
               Back
             </Button>
-            <Button href={nextHref}>Continue</Button>
+            <Button href={nextHref} variant="navy">Continue</Button>
           </div>
         </div>
       </section>
