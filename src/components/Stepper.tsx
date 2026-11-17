@@ -24,7 +24,7 @@ export function Stepper({ current }: { current: 1 | 2 | 3 | 4 }) {
                   done
                     ? "bg-[#43a047]"
                     : active
-                      ? "bg-[#205c6f]"
+                      ? "bg-[#363a61]"
                       : "bg-[#bdbdbd]"
                 }`}
               >

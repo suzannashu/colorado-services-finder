@@ -20,10 +20,10 @@ export default function EligibilityStep3() {
           </div>
           <ChildrenList />
           <div className="flex items-center justify-between py-10">
-            <Button href="/eligibility/2" variant="secondary">
+            <Button href="/eligibility/2" variant="navy-outline">
               Back
             </Button>
-            <Button href="/eligibility/4">Continue</Button>
+            <Button href="/eligibility/4" variant="navy">Continue</Button>
           </div>
         </div>
       </section>

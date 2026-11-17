@@ -32,7 +32,7 @@ export default function EligibilityStep1() {
           </div>
           <div className="flex items-center justify-between pt-2">
             <span />
-            <Button href="/eligibility/2">Continue</Button>
+            <Button href="/eligibility/2" variant="navy">Continue</Button>
           </div>
         </div>
       </section>

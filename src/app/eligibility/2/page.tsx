@@ -31,10 +31,10 @@ export default function EligibilityStep2() {
             />
           </div>
           <div className="flex items-center justify-between pt-2">
-            <Button href="/eligibility" variant="secondary">
+            <Button href="/eligibility" variant="navy-outline">
               Back
             </Button>
-            <Button href="/eligibility/3">Continue</Button>
+            <Button href="/eligibility/3" variant="navy">Continue</Button>
           </div>
         </div>
       </section>

@@ -71,12 +71,12 @@ export function ChildrenList() {
         />
       ))}
       <Button
-        variant="ghost"
+        variant="navy-ghost"
         size="sm"
         className="self-start bg-[#f3f6fa]"
         onClick={addChild}
       >
-        <Icon name="icon-add-teal.svg" size={16} />
+        <Icon name="icon-add-navy.svg" size={16} />
         Add a child
       </Button>
     </>
