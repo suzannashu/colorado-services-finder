@@ -131,17 +131,25 @@ export function Chip({
 export function TextField({
   label,
   value,
+  placeholder,
   hint,
   prefix,
   className = "",
   readOnly = false,
+  required = false,
+  name,
+  type = "text",
 }: {
   label: string;
   value?: string;
+  placeholder?: string;
   hint?: string;
   prefix?: ReactNode;
   className?: string;
   readOnly?: boolean;
+  required?: boolean;
+  name?: string;
+  type?: "text" | "email" | "tel";
 }) {
   return (
     <label
@@ -151,10 +159,14 @@ export function TextField({
       <div className="flex items-center gap-2.5 border-b border-[#9e9e9e] bg-[#eee] p-4">
         {prefix}
         <input
+          name={name}
+          type={type}
           defaultValue={value}
+          placeholder={placeholder}
           readOnly={readOnly}
+          required={required}
           aria-readonly={readOnly || undefined}
-          className={`w-full bg-transparent text-base text-[#1d1d1d] outline-none ${readOnly ? "cursor-default" : ""}`}
+          className={`w-full bg-transparent text-base text-[#1d1d1d] outline-none placeholder:text-[#9e9e9e] ${readOnly ? "cursor-default" : ""}`}
         />
       </div>
       {hint ? <span className="text-base text-black">{hint}</span> : null}
@@ -168,12 +180,16 @@ export function SelectField({
   options,
   className = "",
   readOnly = false,
+  required = false,
+  name,
 }: {
   label: string;
   value: string;
   options?: string[];
   className?: string;
   readOnly?: boolean;
+  required?: boolean;
+  name?: string;
 }) {
   return (
     <label
@@ -183,8 +199,10 @@ export function SelectField({
       <div className="relative flex items-center justify-between border-b border-[#9e9e9e] bg-[#eee] p-4">
         {options ? (
           <select
+            name={name}
             defaultValue={value}
             disabled={readOnly}
+            required={required}
             className="w-full appearance-none bg-transparent pr-8 text-base text-[#1d1d1d] outline-none disabled:cursor-default"
           >
             {options.map((option) => (
