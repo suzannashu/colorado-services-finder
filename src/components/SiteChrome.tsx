@@ -79,19 +79,29 @@ export function SiteHeader({
 export function SiteFooter() {
   return (
     <footer className="w-full bg-[#363a61] text-white">
-      <div className="mx-auto flex w-full max-w-[1440px] items-end justify-between p-[60px]">
-        <div className="flex w-[296px] flex-col gap-4 text-base leading-[normal]">
-          <p className="font-heavy">EXPLORE</p>
-          <Link href="/browse" className="hover:underline">
-            All programs
-          </Link>
-          <Link href="/eligibility" className="hover:underline">
-            Check eligibility
-          </Link>
-          <Link href="/refer" className="hover:underline">
-            Refer a family
-          </Link>
-          <span>Sign in</span>
+      <div className="mx-auto flex w-full max-w-[1440px] flex-wrap items-end justify-between gap-10 p-[60px]">
+        <div className="flex flex-wrap items-start gap-x-20 gap-y-8 text-base leading-[normal]">
+          <div className="flex flex-col gap-4">
+            <p className="font-heavy">EXPLORE</p>
+            <Link href="/browse" className="hover:underline">
+              Browse programs
+            </Link>
+            <Link href="/eligibility" className="hover:underline">
+              Check eligibility
+            </Link>
+            <Link href="/dashboard/login" className="hover:underline">
+              Family login
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            <p className="font-heavy">FOR PROFESSIONALS</p>
+            <Link href="/refer" className="hover:underline">
+              Refer a family
+            </Link>
+            <Link href="/refer/login" className="hover:underline">
+              Home visiting login
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col items-end gap-6">
@@ -100,16 +110,26 @@ export function SiteFooter() {
               POWERED BY
             </p>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/assets/hifi-logo-bridgecare.svg"
-              alt="BridgeCare"
-              className="h-[31px] w-[165px]"
-            />
+            <img src="/assets/hifi-logo-bridgecare.svg" alt="BridgeCare" />
           </div>
-          <div className="flex items-center gap-3 text-sm leading-[normal]">
-            <span>Terms of service</span>
+          <div className="flex items-center gap-3 whitespace-nowrap text-sm leading-[normal]">
+            <a
+              href="https://getbridgecare.com/terms-of-service/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Terms of service
+            </a>
             <span className="text-base leading-[normal]">|</span>
-            <span>Privacy Policy</span>
+            <a
+              href="https://getbridgecare.com/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>
