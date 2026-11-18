@@ -130,13 +130,6 @@ export default function ReferPage() {
                 Start a referral
                 <Icon name="icon-east-white.svg" size={20} />
               </Button>
-              <Button
-                href="/refer/login"
-                variant="navy-outline"
-                className="leading-4"
-              >
-                Log in
-              </Button>
             </div>
           </div>
           <HeroIllustration />
