@@ -65,7 +65,7 @@ function ApplyActions() {
         variant="navy-outline"
         className="border! leading-4"
       >
-        Log in to my dashboard
+        Continue my application
       </Button>
     </div>
   );
