@@ -83,16 +83,17 @@ export default function ApplyRegisterPage() {
           <div className="flex flex-col items-center gap-4">
             <Button
               href="/apply/select-programs"
+              variant="navy"
               className="w-[420px] justify-center whitespace-nowrap"
             >
               Create my account
             </Button>
             <Button
-              href="/apply/select-programs"
-              variant="secondary"
+              href="/dashboard/login"
+              variant="navy-outline"
               className="w-[420px] justify-center whitespace-nowrap"
             >
-              Log in if you already have an account
+              Log into my account
             </Button>
           </div>
         </div>
