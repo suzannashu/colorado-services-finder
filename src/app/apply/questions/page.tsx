@@ -3,6 +3,7 @@ import { ApplicationFlowShell } from "@/components/ApplicationFlowShell";
 export default function ApplyQuestionsPage() {
   return (
     <ApplicationFlowShell
+      tone="navy"
       progress={75}
       title="Application questions"
       subtitle="Lorem ipsum"

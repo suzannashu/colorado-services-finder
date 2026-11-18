@@ -40,7 +40,7 @@ export function EligibilityCard({
           >
             <span className="text-sm text-black">Apply to this program</span>
             {isChecked ? (
-              <span className="flex size-7 items-center justify-center rounded-[2px] bg-[#205c6f] text-base font-bold text-white">
+              <span className="flex size-7 items-center justify-center rounded-[2px] bg-[#363a61] text-base font-bold text-white">
                 ✓
               </span>
             ) : (
@@ -54,7 +54,7 @@ export function EligibilityCard({
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-3">
           <span className="text-base text-black">{beneficiary}</span>
-          <Chip>{role}</Chip>
+          <Chip tone="navy">{role}</Chip>
         </div>
         {birthDate ? <p className="text-sm text-black">{birthDate}</p> : null}
       </div>
@@ -64,7 +64,7 @@ export function EligibilityCard({
           type="button"
           onClick={() => setIsExpanded((v) => !v)}
           aria-expanded={isExpanded}
-          className="flex items-center gap-2 text-base text-[#205c6f]"
+          className="flex items-center gap-2 text-base text-[#363a61]"
         >
           View eligibility details
           <Icon

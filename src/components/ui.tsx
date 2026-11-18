@@ -229,7 +229,7 @@ export function Counter({ value = 2 }: { value?: number }) {
     <div className="flex items-center gap-6">
       <button
         type="button"
-        className="flex size-6 items-center justify-center rounded-full bg-[#205c6f]"
+        className="flex size-6 items-center justify-center rounded-full bg-[#363a61]"
         aria-label="Decrease"
       >
         <Icon name="icon-remove.svg" size={16} />
@@ -239,7 +239,7 @@ export function Counter({ value = 2 }: { value?: number }) {
       </div>
       <button
         type="button"
-        className="flex size-6 items-center justify-center rounded-full bg-[#205c6f]"
+        className="flex size-6 items-center justify-center rounded-full bg-[#363a61]"
         aria-label="Increase"
       >
         <Icon name="icon-add.svg" size={16} />

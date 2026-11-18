@@ -24,12 +24,12 @@ export default function ReviewIncomePage() {
             <span
               className={`flex size-5 items-center justify-center rounded-full border-2 ${
                 option.selected
-                  ? "border-[#205c6f]"
+                  ? "border-[#363a61]"
                   : "border-[#9e9e9e]"
               }`}
             >
               {option.selected ? (
-                <span className="size-2.5 rounded-full bg-[#205c6f]" />
+                <span className="size-2.5 rounded-full bg-[#363a61]" />
               ) : null}
             </span>
             <span className="text-base text-[#1d1d1d]">{option.label}</span>

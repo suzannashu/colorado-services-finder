@@ -145,10 +145,12 @@ function ApplyProgramsShell({ children }: { children: ReactNode }) {
           </div>
           {children}
           <div className="flex items-center justify-between py-10">
-            <Button href="/apply/pre-app" variant="secondary">
+            <Button href="/apply/pre-app" variant="navy-outline">
               Back
             </Button>
-            <Button href="/apply/questions">Continue</Button>
+            <Button href="/apply/questions" variant="navy">
+              Continue
+            </Button>
           </div>
         </div>
       </section>
