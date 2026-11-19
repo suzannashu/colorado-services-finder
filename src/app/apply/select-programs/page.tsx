@@ -193,7 +193,7 @@ export default function SelectProgramsPage() {
           ))}
 
           <div className="flex justify-center">
-            <Button href="/apply/before-you-apply" variant="navy">
+            <Button href="/apply/pre-app" variant="navy">
               Start application
               <Icon name="icon-east-white-3.svg" size={20} />
             </Button>
