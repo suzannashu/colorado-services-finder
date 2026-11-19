@@ -6,7 +6,7 @@ export default function PreAppPage() {
       progress={25}
       title="Pre-app screener"
       subtitle="Lorem ipsum"
-      backHref="/apply/before-you-apply"
+      backHref="/apply/select-programs"
       continueHref="/apply/programs"
     >
       <div className="flex h-[308px] items-center justify-center rounded border border-[#e0e0e0] bg-[#f3f6fa] px-8 text-center">
