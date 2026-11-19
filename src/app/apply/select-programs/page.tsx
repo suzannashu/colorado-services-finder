@@ -125,7 +125,7 @@ function ApplyCheckbox({
         alt=""
         src={
           checked
-            ? "/assets/checkbox-selected-28.svg"
+            ? "/assets/checkbox-selected-navy-28.svg"
             : "/assets/checkbox-unselected-28.svg"
         }
         width={28}
@@ -173,7 +173,7 @@ export default function SelectProgramsPage() {
                   }
                 />
               </div>
-              <Chip>{program.category}</Chip>
+              <Chip tone="navy">{program.category}</Chip>
               <p className="text-base leading-5 text-black">
                 {program.description}
               </p>
@@ -193,7 +193,7 @@ export default function SelectProgramsPage() {
           ))}
 
           <div className="flex justify-center">
-            <Button href="/apply/before-you-apply">
+            <Button href="/apply/before-you-apply" variant="navy">
               Start application
               <Icon name="icon-east-white-3.svg" size={20} />
             </Button>
