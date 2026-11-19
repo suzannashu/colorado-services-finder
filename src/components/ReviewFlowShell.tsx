@@ -27,7 +27,7 @@ export function ReviewFlowShell({
         <div className="flex w-full max-w-[790px] flex-col gap-6">
           <div className="h-1 w-full overflow-hidden rounded-full bg-[#e0e0e0]">
             <div
-              className="h-full bg-[#205c6f]"
+              className="h-full bg-[#363a61]"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -41,10 +41,12 @@ export function ReviewFlowShell({
           </div>
           {children}
           <div className="flex items-center justify-between py-10">
-            <Button href={backHref} variant="secondary">
+            <Button href={backHref} variant="navy-outline">
               {backLabel}
             </Button>
-            <Button href={continueHref}>{continueLabel}</Button>
+            <Button href={continueHref} variant="navy">
+              {continueLabel}
+            </Button>
           </div>
         </div>
       </section>

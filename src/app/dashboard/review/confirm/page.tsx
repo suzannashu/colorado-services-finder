@@ -16,10 +16,12 @@ export default function ReviewConfirmPage() {
             </p>
           </div>
           <div className="flex w-full items-center justify-between py-10">
-            <Button href="/dashboard/review/income" variant="secondary">
+            <Button href="/dashboard/review/income" variant="navy-outline">
               Back
             </Button>
-            <Button href="/apply/programs">Continue to application</Button>
+            <Button href="/apply/programs" variant="navy">
+              Continue to application
+            </Button>
           </div>
         </div>
       </section>

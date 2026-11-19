@@ -11,6 +11,7 @@ export function ApplicationFlowShell({
   continueHref,
   continueLabel = "Continue",
   showBack = true,
+  tone = "teal",
 }: {
   children: ReactNode;
   progress?: number;
@@ -20,6 +21,7 @@ export function ApplicationFlowShell({
   continueHref?: string;
   continueLabel?: string;
   showBack?: boolean;
+  tone?: "teal" | "navy";
 }) {
   return (
     <PageShell borderedHeader className="bg-white">
@@ -28,7 +30,7 @@ export function ApplicationFlowShell({
           {progress !== undefined ? (
             <div className="h-1 w-full overflow-hidden rounded-full bg-[#e0e0e0]">
               <div
-                className="h-full bg-[#205c6f] transition-all"
+                className={`h-full transition-all ${tone === "navy" ? "bg-[#363a61]" : "bg-[#205c6f]"}`}
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -45,14 +47,22 @@ export function ApplicationFlowShell({
           {(backHref || continueHref) && (
             <div className="flex items-center justify-between py-10">
               {showBack && backHref ? (
-                <Button href={backHref} variant="secondary">
+                <Button
+                  href={backHref}
+                  variant={tone === "navy" ? "navy-outline" : "secondary"}
+                >
                   Back
                 </Button>
               ) : (
                 <span />
               )}
               {continueHref ? (
-                <Button href={continueHref}>{continueLabel}</Button>
+                <Button
+                  href={continueHref}
+                  variant={tone === "navy" ? "navy" : "primary"}
+                >
+                  {continueLabel}
+                </Button>
               ) : null}
             </div>
           )}
