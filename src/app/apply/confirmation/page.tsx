@@ -21,7 +21,7 @@ export default function ApplyConfirmationPage() {
             </p>
           </div>
           <hr className="w-full border-[#e0e0e0]" />
-          <Button href="/dashboard-new" className="my-10">
+          <Button href="https://universal-family-dashboard.vercel.app/new-user/to-do" className="my-10">
             Go to my dashboard
           </Button>
         </div>
