@@ -8,6 +8,7 @@ export default function ReviewAddressPage() {
       title="Is this still your address?"
       backHref="/dashboard/review"
       continueHref="/dashboard/review/children"
+      editLabel="Edit my info"
     >
       <ReadonlyField label="Address" value="4505 S Peck Dr" required />
       <div className="flex gap-4">

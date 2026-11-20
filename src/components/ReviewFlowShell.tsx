@@ -9,8 +9,9 @@ export function ReviewFlowShell({
   subtitle,
   backHref,
   continueHref,
-  backLabel = "Edit my info",
+  backLabel = "Back",
   continueLabel = "Save and continue",
+  editLabel,
 }: {
   children?: ReactNode;
   progress: number;
@@ -20,6 +21,7 @@ export function ReviewFlowShell({
   continueHref: string;
   backLabel?: string;
   continueLabel?: string;
+  editLabel?: string;
 }) {
   return (
     <PageShell borderedHeader className="bg-white">
@@ -41,9 +43,14 @@ export function ReviewFlowShell({
           </div>
           {children}
           <div className="flex items-center justify-between py-10">
-            <Button href={backHref} variant="secondary">
-              {backLabel}
-            </Button>
+            <div className="flex items-center gap-3">
+              {editLabel ? (
+                <Button variant="secondary">{editLabel}</Button>
+              ) : null}
+              <Button href={backHref} variant="secondary">
+                {backLabel}
+              </Button>
+            </div>
             <Button href={continueHref}>{continueLabel}</Button>
           </div>
         </div>

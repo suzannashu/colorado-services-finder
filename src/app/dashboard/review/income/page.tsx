@@ -14,6 +14,7 @@ export default function ReviewIncomePage() {
       subtitle="Include any payroll income, or from self-employment, disability, unemployment benefits, or other sources."
       backHref="/dashboard/review/household"
       continueHref="/dashboard/review/confirm"
+      editLabel="Edit my info"
     >
       <div className="flex flex-col gap-2 opacity-50">
         {options.map((option) => (
