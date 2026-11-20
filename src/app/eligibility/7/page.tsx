@@ -371,7 +371,7 @@ export default function EligibilityResults() {
                 programs selected for one application
               </span>
             </p>
-            <Button href="/apply/before-you-apply" variant="navy">
+            <Button href="/apply/pre-app" variant="navy">
               Start application
               <Icon name="icon-east-white-3.svg" size={20} alt="" />
             </Button>
