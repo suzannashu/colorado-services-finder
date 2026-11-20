@@ -2,6 +2,9 @@ import Link from "next/link";
 import { PageShell } from "@/components/SiteChrome";
 import { Button, Icon } from "@/components/ui";
 
+const signedInDestination =
+  "https://universal-family-dashboard.vercel.app/returning-user/to-do";
+
 export default function DashboardLoginPage() {
   return (
     <PageShell borderedHeader className="bg-[#f3f6fa]">
@@ -40,7 +43,7 @@ export default function DashboardLoginPage() {
             <p className="text-right text-base text-[#205c6f] underline">
               Forgot password?
             </p>
-            <Button href="/dashboard" className="w-full justify-center">
+            <Button href={signedInDestination} className="w-full justify-center">
               Log in
             </Button>
           </div>
@@ -49,14 +52,14 @@ export default function DashboardLoginPage() {
 
           <div className="mx-auto flex w-full max-w-[334px] flex-col gap-[18px]">
             <Button
-              href="/dashboard"
+              href={signedInDestination}
               variant="secondary"
               className="w-full justify-center"
             >
               Request a one-time login code
             </Button>
             <Link
-              href="/dashboard"
+              href={signedInDestination}
               className="flex h-14 w-full items-center justify-center gap-3 rounded border border-[#9e9e9e] bg-white px-6 py-3 text-base text-[#424242]"
             >
               <Icon name="icon-google.svg" size={16} />
