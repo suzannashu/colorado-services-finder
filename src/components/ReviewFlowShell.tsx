@@ -43,15 +43,15 @@ export function ReviewFlowShell({
           </div>
           {children}
           <div className="flex items-center justify-between py-10">
+            <Button href={backHref} variant="secondary">
+              {backLabel}
+            </Button>
             <div className="flex items-center gap-3">
               {editLabel ? (
                 <Button variant="secondary">{editLabel}</Button>
               ) : null}
-              <Button href={backHref} variant="secondary">
-                {backLabel}
-              </Button>
+              <Button href={continueHref}>{continueLabel}</Button>
             </div>
-            <Button href={continueHref}>{continueLabel}</Button>
           </div>
         </div>
       </section>
