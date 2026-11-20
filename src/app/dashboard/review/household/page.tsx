@@ -9,6 +9,7 @@ export default function ReviewHouseholdPage() {
       subtitle="A household member could be a spouse or partner, child, or other adult living in the home."
       backHref="/dashboard/review/children"
       continueHref="/dashboard/review/income"
+      editLabel="Edit my info"
     >
       <div className="opacity-50">
         <p className="mb-3 text-lg text-[#1d1d1d]">

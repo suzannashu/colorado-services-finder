@@ -55,6 +55,7 @@ export default function ReviewChildrenPage() {
       title="Are the children listed below still living in your household?"
       backHref="/dashboard/review/address"
       continueHref="/dashboard/review/household"
+      editLabel="Edit my info"
     >
       <ChildBlock
         name="Kayleigh Abrams"
